@@ -1,0 +1,13 @@
+mkdir /home/ec2-user/volume
+sudo mount /dev/sdh /home/ec2-user/volume
+sudo chmod -R 777 /home/ec2-user/volume
+
+sudo ln -s /home/ec2-user/volume/msm/conf_files/m1.large-msm.conf /etc/msm.conf
+sudo mkdir /dev/shm/msm
+sudo chmod -R 775 /dev/shm/msm
+sudo /home/ec2-user/volume/msm/msm update
+
+sudo /home/ec2-user/volume/msm/msm BSBGFYSODTKLIAKHAWAKHcraft start
+
+java -Xmx3G -Xms3G -jar minecraft_server.1.6.1.jar
+sudo msm jargroup create minecraft https://s3.amazonaws.com/Minecraft.Download/versions/1.6.2/minecraft_server.1.6.2.jar

@@ -1,0 +1,3 @@
+ssh -i awsGeneralKeyPair.pem ec2-user@54.235.244.200
+
+alias msm=/home/ec2-user/volume/msm/msm
